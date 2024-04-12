@@ -28,27 +28,37 @@ const projects = (await getCollection('work'))
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
+	        	<div class="header-min">
+			        <img
+			            class="min"
+					    alt="Evgeniia Ivchenko"
+					    src="/assets/IMG_7647_2.jpg"
+				    />
+				   {/* <div class="roles-min">
+						<Pill><Icon icon="code" size="1.33em" />Product Designer</Pill>
+						<Pill><Icon icon="microphone-stage" size="1.33em" />Web Designer</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" />Brand designer</Pill>
+					</div>*/}
+			    </div>
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Zhenya Ivchenko"
-					tagline="I am a Interface Designer who is currently based in Serbia, Novi-Sad."
+					title="Evgeniia Ivchenko"
+					tagline="Interface Designer"
 					align="start"
 				>
-					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-					</div>
 				</Hero>
-
+               <div class="max">
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
-					width="480"
-					height="620"
-					src="/assets/7647_2.png"
+					alt="Evgeniia Ivchenko"
+					src="/assets/IMG_7647_2.jpg"
 				/>
+				</div>
 			</header>
-
+                    <div class="roles">
+						<Pill><Icon icon="code" size="1.33em" />Interface Designer</Pill>
+						<Pill><Icon icon="microphone-stage" size="1.33em" />Web Designer</Pill>
+						<Pill><Icon icon="pencil-line" size="1.33em" />Brand designer</Pill>
+					</div>
 			<Skills />
 		</div>
 
@@ -79,7 +89,7 @@ const projects = (await getCollection('work'))
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
+			{/*<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
@@ -99,7 +109,7 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
-			</section>
+			</section>*/}
 		</main>
 
 		<ContactCTA />
@@ -119,11 +129,36 @@ const projects = (await getCollection('work'))
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
+		/*min-width: 200px;*/
+		max-height: 200px;
+		/*aspect-ratio: 1 / 1;*/
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
+		border-radius: 50%;
 		box-shadow: var(--shadow-md);
+	}
+	.max {
+		display: none;
+	}
+
+    .header-min {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.min {
+		max-width: 200px;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 50%;
+		box-shadow: var(--shadow-md);
+	}
+
+	.roles-min {
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 	}
 
 	@media (min-width: 50em) {
@@ -135,15 +170,31 @@ const projects = (await getCollection('work'))
 		}
 
 		.roles {
+			padding-inline: 2.5rem;
 			margin-top: 0.5rem;
 			display: flex;
+			justify-content: space-between;
 			gap: 0.5rem;
+		}
+		.roles-min {
+			display: none;
+		}
+		.header-min {
+			display: none;
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
+			min-height: 400px;
+			aspect-ratio: 2 / 2;
 			border-radius: 4.5rem;
 			object-fit: cover;
+
+		}
+		.max {
+		display: flex;
+	}
+		.min {
+			display: none;
 		}
 	}
 

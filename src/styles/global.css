@@ -15,6 +15,7 @@
 	--gray-999-basis: 0, 0%, 100%;
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gray-999: #ffffff;
+	--menu-open: url('/assets/backgrounds/bg-main-light.svg');
 
 	--accent-light: #c561f6;
 	--accent-regular: #7611a6;
@@ -87,7 +88,8 @@
 	--gray-900: #141925;
 	--gray-999-basis: 225, 31%, 5%;
 	--gray-999: #090b11;
-
+    --menu-open: url('/assets/backgrounds/bg-main-dark.svg');
+	
 	--accent-light: #1c0056;
 	--accent-regular: #7611a6;
 	--accent-dark: #c561f6;

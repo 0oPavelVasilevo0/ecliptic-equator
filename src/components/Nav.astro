@@ -12,20 +12,16 @@ const textLinks: { label: string; href: string }[] = [
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Twitter', href: 'https://twitter.com/me', icon: 'twitter-logo' },
-	{ label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
-	{ label: 'CodePen', href: 'https://codepen.io/me', icon: 'codepen-logo' },
-	{ label: 'dribbble', href: 'https://dribbble.com/me', icon: 'dribbble-logo' },
-	{ label: 'YouTube', href: 'https://www.youtube.com/@me/', icon: 'youtube-logo' },
+	{ label: 'Telegram', href: 'https://www.telegram.com/@me/', icon: 'telegram-logo' },
+	{ label: 'Instagram', href: 'https://www.instagram.com/@me/', icon: 'instagram-logo' },
 ];
 ---
 
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			Zhenya Ivchenko
+			<Icon icon="cube-logo" color="var(--accent-regular)" size="1.6em" gradient />
+			Evgeniia Ivchenko
 		</a>
 		<menu-button>
 			<template>
@@ -181,6 +177,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	.menu-button {
 		position: relative;
 		display: flex;
+		cursor: pointer;
 		border: 0;
 		border-radius: 999rem;
 		padding: 0.5rem;
@@ -224,7 +221,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
+	   /*background-color: var(--gray-999);*/
+	   background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
 		border-bottom: 1px solid var(--gray-800);
 	}
 
@@ -246,7 +244,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		justify-content: space-between;
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
-		background-color: var(--gray-999);
+		/*background-color: var(--gray-999);*/
+		background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
 		border-radius: 0 0 0.75rem 0.75rem;
 		box-shadow: var(--shadow-lg);
 	}
@@ -262,13 +261,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		display: flex;
 		padding: var(--icon-padding);
 		text-decoration: none;
-		color: var(--accent-dark);
+		color: var(--gray-0);
 		transition: color var(--theme-transition);
 	}
 
 	.social:hover,
 	.social:focus {
-		color: var(--accent-text-over);
+		color: var(--accent-regular);
 	}
 
 	.theme-toggle {
@@ -343,13 +342,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			justify-self: flex-end;
 			align-items: center;
 			padding: 0;
-			background-color: transparent;
+			/*background-color: transparent;*/
+			background: transparent;
 			box-shadow: none;
 		}
 
-		.socials {
+		/*.socials {
 			display: none;
-		}
+		}*/
 	}
 
 	@media (min-width: 60em) {
