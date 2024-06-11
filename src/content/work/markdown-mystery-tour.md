@@ -1,35 +1,47 @@
 ---
-title: Markdown Mystery Tour
-publishDate: 2020-03-02 00:00:00
+title: WSCloud
+publishDate: 2024-06-01 00:00:00
 img: /assets/4.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: WSCloud
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  web приложение для администраторов и менеджеров клуба
 tags:
   - Design
   - Dev
   - User Testing
 ---
 
-## Level-two heading
+> ###### Из РФ ушли почти все компании которые могли предоставлять софт компьютерным клубам. У одного из владельцев клуба появлась идея создать свое ПО.
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+### Задача
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+Спроектировать web приложение для администраторов и менеджеров клуба, плюс десктопное приложение для клиентов. В кратчайшие сроки реализовать MVP.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+### Исследовали рынок
 
-### Level-three heading
+Начали работать над web приложением для администраторов и менеджеров клуба. Для начала мы с аналитиком проанализировали конкурентов, пообщались с администраторами клубов. Поняли какие функциональные блоки необходимы для MVP.
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+###  Снова исследовали
 
-### Level-three heading
+Решили что начнем прорабатывать раздел "Компьютеры". Изучили как эта функциональность выглядит и работает у конкурентов. Поговорили с потенциальными пользователями и узнали с какими проблемами они сейчас сталкиваются при работе с др. системами.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+#### Основные боли пользователей:
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+- Трудно ориентироваться по карте расположения ПК. Не понятные обозначения. Нет зума чтобы отдалить и посмотреть всю карту клуба
+- Нельзя узнать включен ПК или выключен пока не провалишься в карточку с деталями
+- Скудная статистика, не дает полного понимания. В некоторых системах ее нет
 
-#### Level-four heading
-
-- We noted this
-- And also this other point
+##### Потребности пользователей:
+- Добавлять ПК - чтобы видеть его данные и им управлять;
+- Редактировать ПК - чтобы исправить данные по ПК;
+- Управлять удаленно ПК: Вкл/Выкл, блокировать, перезагружать и т.д. - чтобы оперативно им управлять;
+- Оставлять комментарии к ПК - чтобы другие пользователи могли узнать о неисправностях;
+- Блокировать ПК - чтобы дать понять администраторам и менеджерам клуба что ПК нельзя занимать из за поломки или брони.
+- Удалять ПК - чтобы не копились неактуальные данные в системе, например если ПК убрали из клуба;
+- Смотреть детали ПК и сессии на нем - чтобы увидеть кем занят ПК и когда он освободится. Узнать технические детали компьютера;
+- Создавать категории и присваивать ПК к ним - чтобы группировать ПК по залам или другим параметрам. Чтобы было можно проставить этим группам разную стоимость в разделе "Тарифы";
+- Редактировать категории - чтобы переименовывать их;
+- Видеть статистику: какие ПК заняты, свободны, вкл, выкл, с какими нет связи, заблокированы - чтобы иметь общую картину в каких состояниях и статусах находятся ПК;
+- Просматривать ПК в виде списка - чтобы было удобно сравнивать детали;
+- Просматривать ПК на карте клуба - чтобы ориентироваться где какой ПК находится на территории клуба;
+- Переносить ПК по карте клуба - чтобы воссоздать картину расположения ПК.

@@ -1,23 +1,23 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+import CallToAction from "../components/CallToAction.astro";
+import Grid from "../components/Grid.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import Pill from "../components/Pill.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
 
 // Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Skills from "../components/Skills.astro";
 
 // Content Fetching: List four most recent work projects
-const projects = (await getCollection('work'))
+const projects = (await getCollection("work"))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
@@ -28,45 +28,52 @@ const projects = (await getCollection('work'))
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
-	        	<div class="header-min">
-			        <img
-			            class="min"
-					    alt="Evgeniia Ivchenko"
-					    src="/assets/IMG_7647_2.jpg"
-				    />
-				   {/* <div class="roles-min">
-						<Pill><Icon icon="code" size="1.33em" />Product Designer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" />Web Designer</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" />Brand designer</Pill>
-					</div>*/}
-			    </div>
-			<header class="hero">
-				<Hero
-					title="Evgeniia Ivchenko"
-					tagline="Interface Designer"
-					align="start"
-				>
-				</Hero>
-               <div class="max">
+			<div class="header-min">
 				<img
+					class="min"
 					alt="Evgeniia Ivchenko"
 					src="/assets/IMG_7647_2.jpg"
 				/>
-				</div>
-			</header>
-                    <div class="roles">
-						<Pill><Icon icon="code" size="1.33em" />Interface Designer</Pill>
+				{
+					/* <div class="roles-min">
+						<Pill><Icon icon="code" size="1.33em" />Product Designer</Pill>
 						<Pill><Icon icon="microphone-stage" size="1.33em" />Web Designer</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" />Brand designer</Pill>
-					</div>
+					</div>*/
+				}
+			</div>
+			<header class="hero">
+				<Hero
+					title="Евгения Ивченко"
+					tagline="Дизайнер Продукта"
+					align="start"
+				/>
+				<div class="max">
+					<img alt="Evgeniia Ivchenko" src="/assets/IMG_7647_2.jpg" />
+				</div>
+			</header>
+			<div class="roles">
+				<Pill
+					><Icon icon="code" size="1.33em" />Дизайнер Интерфейса</Pill
+				>
+				<Pill
+					><Icon icon="microphone-stage" size="1.33em" />Веб Дизайнер</Pill
+				>
+				<Pill
+					><Icon icon="pencil-line" size="1.33em" />Бренд Дизайнер</Pill
+				>
+			</div>
 			<Skills />
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Избранные работы</h3>
+					<p>
+						Некоторые из моих представленных работ
+						за последние несколько лет
+					</p>
 				</header>
 
 				<div class="gallery">
@@ -83,13 +90,13 @@ const projects = (await getCollection('work'))
 
 				<div class="cta">
 					<CallToAction href="/work/">
-						View All
+						Посмотреть больше
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
 			</section>
 
-			{/*<section class="section with-background bg-variant">
+			<!-- <section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
@@ -109,7 +116,7 @@ const projects = (await getCollection('work'))
 						}
 					</Grid>
 				</div>
-			</section>*/}
+			</section> -->
 		</main>
 
 		<ContactCTA />
@@ -141,7 +148,7 @@ const projects = (await getCollection('work'))
 		display: none;
 	}
 
-    .header-min {
+	.header-min {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
@@ -156,9 +163,9 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles-min {
-      display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	@media (min-width: 50em) {
@@ -188,11 +195,10 @@ const projects = (await getCollection('work'))
 			aspect-ratio: 2 / 2;
 			border-radius: 4.5rem;
 			object-fit: cover;
-
 		}
 		.max {
-		display: flex;
-	}
+			display: flex;
+		}
 		.min {
 			display: none;
 		}
@@ -212,7 +218,7 @@ const projects = (await getCollection('work'))
 	.with-background::before {
 		--hero-bg: var(--bg-image-subtle-2);
 
-		content: '';
+		content: "";
 		position: absolute;
 		pointer-events: none;
 		left: 50%;
@@ -221,7 +227,7 @@ const projects = (await getCollection('work'))
 		top: 0;
 		transform: translateY(-75%) translateX(-50%);
 		background:
-			url('/assets/backgrounds/noise.png') top center/220px repeat,
+			url("/assets/backgrounds/noise.png") top center/220px repeat,
 			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
 			var(--gray-999);
 		background-blend-mode: overlay, normal, normal, normal;
@@ -248,12 +254,12 @@ const projects = (await getCollection('work'))
 	@media (min-width: 50em) {
 		.section {
 			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+			grid-template-areas: "header header header header" "gallery gallery gallery gallery";
 			gap: 5rem;
 		}
 
 		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+			grid-template-areas: "header header header cta" "gallery gallery gallery gallery";
 		}
 
 		.section-header {

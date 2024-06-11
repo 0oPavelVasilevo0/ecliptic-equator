@@ -1,69 +1,175 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<BaseLayout title="About | Evgeniia Ivchenko" description="About Evgeniia Ivchenko">
+<BaseLayout
+	title="About | Evgeniia Ivchenko"
+	description="About Evgeniia Ivchenko"
+>
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="Обо мне"
+				tagline="Спасибо, что зашли. Прочтите ниже, чтобы узнать больше обо мне и моем опыте."
 			>
-				<img
-					src="/assets/about-2.jpg"
-					alt="Evgeniia Ivchenko"
-				/>
+				<img src="/assets/about-2.jpg" alt="Evgeniia Ivchenko" />
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<!-- <h2 class="section-title">Background</h2> -->
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Более 9 лет проектирую интерфейсы опираясь на
+						потребности пользователей. Помогаю компаниям решать
+						проблемы и достигать целей. Принимаю участие во всех
+						этапах создания и развития продукта. Имею большой опыт
+						работы проектирования Web приложений, iOS и Android
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Опыт Работы</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<p>
+						<a href="https://easycomm.ru/" target="_blank">
+							Easy Commerce
+						</a>
+						<strong> Июль 2023 — По настоящее время </strong>
+					</p>
+					<p>
+						Система мониторинга онлайн-полки, которая помогает
+						строить простую, эффективную работу с маркетплейсами и
+						онлайн-ритейлерами
+					</p>
+					<p>
+						<strong>Результаты работы:</strong>
+					</p>
+					<p>
+						- Разработала интерфейс продукта, в котором учтены все
+						потребности пользователей клиентских проектов.
+					</p>
+					<p>
+						- Проработала UI KIT c использованием variants, styles,
+						auto layouts
+					</p>
+					<p>Начали работу над дизайн системой</p>
+					<p>
+						- Написала документацию в которой собраны все материалы
+						по задаче: описание проблемы, ценность для бизнеса,
+						описание гипотез, метрики, ограничения, протокол
+						совещаний, User Stories, Use Cases и т.д.
+					</p>
+					<p>
+						<a href="https://wsgame.ru" target="_blank">
+							WS Cloud
+						</a>
+						<strong> Март 2023 — По настоящее время </strong>
+					</p>
+					<p>Стартап. ПО для компьютерных клубов.</p>
+					<p>
+						<strong>Результаты работы:</strong>
+					</p>
+					<p>
+						- Спроектирован интерфейс для клиентов и администраторов
+						клуба
+					</p>
+					<p>- Сформированы два UI Style Guide</p>
+					<p>- В 5 клбов Самары успешно внедрили ПО</p>
+					<p>
+						<a href="https://wowworks.ru/" target="_blank">
+							Wowworks
+						</a>
+						<strong> Август 2021 — март 2023 </strong>
+					</p>
+					<p>
+						Краудсорсинговая платформа, которая привлекает частных
+						исполнителей на разовые работы для розничных сетей и
+						других корпоративных клиентов. Сервис помогает компаниям
+						экономить средства на обслуживании торговых точек и
+						офисов, а исполнителям зарабатывать.
+					</p>
+					<p>
+						<strong>Результаты работы:</strong>
+					</p>
+					<p>
+						- С командой снизили нагрузку на менеджеров отдела
+						"Клининг", автоматизировав процесс сбора актов
+						выполненных работ с объектов обслуживания.
+						Спроектировала интерфейс при помощи которого сотрудники
+						на объекте могут в пару кликов отправлять отчеты
+						менеджерам компании Wowworks
+					</p>
+					<p>
+						- Наладили процесс сбора счетов на оплату от
+						исполнителей в Германии; Занималась дизайном iOS и
+						Android приложения. Удалось привлечь больше исполнителей
+						на платформу после запуска iOS приложения
+					</p>
+					<p>
+						- Помогала аналитикам анализировать и собирать данные.
+						Вела документацию в которой собраны все материалы по
+						задаче: описание проблемы, ценность для бизнеса,
+						описание гипотез, метрики, ограничения, протокол
+						совещаний и т.д
+					</p>
+					<p>
+						<a href="https://magenta-technology.ru" target="_blank">
+							Magenta Technology
+						</a>
+						<strong> Март 2017 — Август 2021 </strong>
+					</p>
+					<p>
+						IT-решения, которые помогают повышать эффективность
+						управления транспортом в ретейле, финансовой,
+						нефтегазовой и других отраслей.
+					</p>
+					<p>
+						<strong>Результаты работы:</strong>
+					</p>
+					<p>
+						- Спроектировала приложения для крупных компаний:
+						Emirates Airlines, Megafon, Открытие, ИНК (Иркутская
+						нефтяная компания) и других.
+					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Высшее образование</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<p>
+						2016
+						<strong>
+							Институт моды, дизайна и технологий, СФ
+						</strong>
+					</p>
+					<p>Дизайн cреды, Дизайн.</p>
+					<p>
+						2012
+						<strong>
+							Филиал Российского государственного университета
+							туризма и сервиса, Самара
+						</strong>
+					</p>
+					<p>Дизайн cреды, Дизайн.</p>
+					<p>
+						2011
+						<strong> Поволжский Государственный Колледж </strong>
+					</p>
+					<p>Дизайн cреды, Дизайн.</p>
 				</div>
 			</section>
 		</main>
-
 		<ContactCTA />
 	</div>
 </BaseLayout>
-
 <style>
 	.about {
 		display: flex;
 		flex-direction: column;
-		gap: 3.5rem;
+		gap: 2rem;
 	}
 
 	img {
@@ -86,7 +192,7 @@ import Hero from '../components/Hero.astro';
 	}
 
 	.content {
-		grid-column: 2 / 4;
+		grid-column: 2 / 3;
 	}
 
 	.content :global(a) {
@@ -103,7 +209,7 @@ import Hero from '../components/Hero.astro';
 	@media (min-width: 50em) {
 		.about {
 			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
+			grid-template-columns: 1fr 3fr 1fr;
 		}
 
 		.about > :global(:first-child) {
