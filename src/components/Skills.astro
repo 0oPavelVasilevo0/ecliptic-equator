@@ -34,9 +34,7 @@ import Icon from "./Icon.astro";
 			size="2.5rem"
 			gradient
 		/>
-		<h2>
-			Эстетическое чутье к деталям (Aesthetic Sensibility to Detail)
-		</h2>
+		<h2>Эстетическое чутье к деталям (Aesthetic Sensibility to Detail)</h2>
 		<p>
 			Визуальная грамотность. Типографика и цветовая теория.
 			Консистентность и аккуратность.
@@ -67,7 +65,7 @@ import Icon from "./Icon.astro";
 		color: var(--gray-400);
 	}
 
-	@media (min-width: 50em) {
+	@media (min-width: 54em) {
 		.box {
 			border-radius: 1.5rem;
 			padding: 2.5rem;
@@ -75,12 +73,13 @@ import Icon from "./Icon.astro";
 
 		.skills {
 			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
+			grid-template-columns: repeat(3, 30%);
+			gap: 5%;
+			word-wrap: break-word;
 		}
 
 		.skills h2 {
-			font-size: var(--text-2xl);
+			font-size: var(--text-xl);
 		}
 	}
 </style>

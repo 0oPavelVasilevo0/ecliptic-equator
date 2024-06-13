@@ -12,4 +12,11 @@ export const collections = {
 			img_alt: z.string().optional(),
 		}),
 	}),
+	about: defineCollection({
+		type: 'content',
+		schema: z.object({
+			article: z.string(),
+			id: z.number()
+		}),
+	}),
 };
